@@ -59,7 +59,7 @@
 
 @keyframes modalopen{
     from{
-        opacity: 0;
+        opacity: 0.5;
     }
     to{
         opacity: 1;

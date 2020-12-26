@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/model.css">
-    <title>じゃんけん | rockpaperscissors</title>  
+    <link rel="shortcut icon" href="img/janken-icon.png">
+    <title>じゃんけん | rock paper scissors</title>  
 </head>
 <body>
     <!-- Japanese way to start the game -->
@@ -17,24 +18,15 @@
     <!-- start to play -->
     <div class="container">
         <div class="choices">
-            <div id="rock" class="choice">
-                <img src="./img/rock.png" alt="グー">グ<span>l</span>
-            </div>
-            <div id="paper" class="choice">
-                <img src="./img/paper.png" alt="パー">パ<span>l</span>
-            </div>
-            <div id="scissors" class="choice">
-                <img src="./img/scissors.png" alt="チョキ">チョキ
-            </div>
+            <i id="rock" class="choice">👊🏻</i>  
+            <i id="paper" class="choice">🖐🏻</i>
+            <i id="scissors" class="choice">✌🏻</i>   
         </div>
     </div>
 
     <!-- show result -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <h1 id="result"></h1>
-            <p id="computer"></p>
-        </div>
+    <div class="modal">
+        <div id="result" class="modal-content"></div>
     </div>
 
     <script src="./js/main.js"></script>

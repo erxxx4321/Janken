@@ -1,14 +1,16 @@
-// show preloader
+// // preloader start
 window.addEventListener("load", function() {
   const loader = document.querySelector(".loader");
   //console.log(loader);
   loader.className += " hidden"; 
 })
+// preloader end
 
-// receive player's choice
+// game start
+// set dom element
 const choices = document.querySelectorAll('.choice');
-
-choices.forEach(choice => choice.addEventListener('click', play));
+const result = document.getElementById('result');
+const modal = document.querySelector('.modal');
 
 // receive computer choice
 function getComputerChoice() {
@@ -46,54 +48,55 @@ function getWinner(p, c){
     }
   }
 }
-console.log(getWinner());
 
-// game start
 function play(e){
   const playerChoice = e.target.id;
   const computerChoice = getComputerChoice();
   const winner = getWinner(playerChoice, computerChoice);
 
-  //console.log(winner,playerChoice, computerChoice);
-  showWinner(computerChoice, winner);
+  console.log(winner,playerChoice, computerChoice);
+  showWinner(winner, computerChoice);
+  modal.style.display = 'block';
+  // console.log(showWinner(winner, computerChoice));
 }
 
 // show final result in Japanese
-function showWinner(computerChoice, winner){
-
-  // translate computer choice into japanese
+function showWinner(winner, computerChoice){
   let jpComChoice;
   if (computerChoice === 'rock') {
-    jpComChoice = 'グー ✊🏻';
-  }　else if (computerChoice === 'paper'){
-    jpComChoice = 'パー ✋🏻';
-  }　else if (computerChoice === 'scissors'){
-    jpComChoice = 'チョキ ✌🏻';
+    jpComChoice = 'グー';
+  }　else if (computerChoice === 'paper') {
+    jpComChoice = 'パー';
+  } else {
+    jpComChoice = 'チョキ';
   }
-  // show computer choice
-  document.getElementById('computer').innerHTML = 'コンピューターは ' + jpComChoice;
-
+  console.log(jpComChoice);
   // show winner in different color
-  let jpWinner;
-  if (winner === 'draw') {
-    jpWinner = 'あいこでしょ！ 😌';
-    document.getElementById('result').innerHTML = `<h1 class="text-draw">${jpWinner}</h1>`;
-  } else if (winner === 'player') {
-    jpWinner = '勝った! 😆';
-    document.getElementById('result').innerHTML = `<h1 class="text-win">${jpWinner}</h1>`;
+  if (winner === 'player') {
+    result.innerHTML = `
+    <h1 class="text-draw">勝った! 😆</h1>
+    <p>コンピューターは ${jpComChoice}</p>
+    `;
   } else if (winner === 'computer') {
-    jpWinner = '負けた! 😭';
-    document.getElementById('result').innerHTML = `<h1 class="text-lose">${jpWinner}</h1>`;
-  } 
-
-  modal.style.display = 'block';
+    result.innerHTML = `
+    <h1 class="text-draw">負けた! 😭</h1>
+    <p>コンピューターは ${jpComChoice}</p>
+    `;
+  } else {
+    result.innerHTML = `
+    <h1 class="text-draw">あいこ! 😆</h1>
+    <p>コンピューターは ${jpComChoice}</p>
+    `;
+  }  
 }
 
-// clear model
-window.addEventListener('click', clearModal);
-
-function clearModal(e) {
+// click and play again
+function clearModal(e) { 
   if(e.target == modal) {
     modal.style.display = 'none';
   }
 }
+
+
+choices.forEach(choice => choice.addEventListener('click', play));
+window.addEventListener('click', clearModal);
