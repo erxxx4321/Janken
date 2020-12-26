@@ -1,0 +1,73 @@
+:root {
+    --modal-duration: 1s;
+    --haizakura: rgb(215, 196, 187);
+    --benitobi: rgb(153, 70, 57);
+    --shironeri: rgb(255, 255, 251);
+    --sangoshu: rgb(241, 124, 103);
+    --kurotobi: rgb(85, 66, 54);
+}
+
+.modal{
+    /* display:none */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background: var(--benitobi);
+}
+
+.modal-content{
+    background: var(--haizakura);
+    position: absolute;
+    width: 30rem;
+    height: 12rem;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    text-align: center;
+    border-radius: 10px;
+    padding: 3rem;
+    box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.2), 0px 7px 20px 0px rgba(0,0,0,0.17);
+    animation: modalopen 1s;
+}
+
+.text-win{
+    color: var(--sangoshu);
+}
+.text-lose{
+    color: var(--kurotobi);
+}
+.text-draw{
+    color: var(--benitobi);
+}
+
+.modal-content h1{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.modal-content p{
+    font-size: 1.2rem;
+    color: var(--shironeri);
+    margin-top: 1rem;
+}
+
+@keyframes modalopen{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media(max-width: 700px){
+    .modal-content{
+        width: 80%;
+    }
+}

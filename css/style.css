@@ -1,0 +1,161 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+:root {
+    --kurotobi: rgb(85, 66, 54);
+    --benitobi: rgb(153, 70, 57);
+    --haizakura: rgb(215, 196, 187);
+    --shironeri: rgb(255, 255, 251);
+    --sumi: rgb(28, 28, 28);
+}
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.2;
+    background: var(--benitobi);
+    color: var(--sumi);
+}
+
+/* start preloader */
+.loader{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--kurotobi);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader h2{
+    font-size: 4rem;
+    color: var(--shironeri);
+    line-height: 1.2;
+    margin: 1rem;
+}
+
+.loader span{
+    display: block;
+}
+.loader.hidden {
+    animation: fadeOut 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+    100% {
+        visibility: hidden;
+    }
+}
+/* end preloader */
+
+.container{
+    max-width: 750px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+.choices{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    text-align: center;
+}
+
+.choice{
+    font-size: 110px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.choice img{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.choice span{
+    display: block;
+}
+
+.choice:hover{
+    background: var(--haizakura);
+    transition: 0.4s;
+}
+
+.text-lose{
+    color: var(--lose-color)
+}
+
+@media(max-width: 700px){
+    .loader h2{
+        font-size: 2rem;
+    }
+    .choices{
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 2rem;
+    }
+    .choice{
+        font-size: 0;
+    }
+}
