@@ -74,12 +74,12 @@ function showWinner(winner, computerChoice){
   // show winner in different color
   if (winner === 'player') {
     result.innerHTML = `
-    <h1 class="text-draw">勝った! 😆</h1>
+    <h1 class="text-win">勝った! 😆</h1>
     <p>コンピューターは ${jpComChoice}</p>
     `;
   } else if (winner === 'computer') {
     result.innerHTML = `
-    <h1 class="text-draw">負けた! 😭</h1>
+    <h1 class="text-lose">負けた! 😭</h1>
     <p>コンピューターは ${jpComChoice}</p>
     `;
   } else {

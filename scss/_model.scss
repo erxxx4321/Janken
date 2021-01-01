@@ -1,12 +1,3 @@
-:root {
-    --modal-duration: 1s;
-    --haizakura: rgb(215, 196, 187);
-    --benitobi: rgb(153, 70, 57);
-    --shironeri: rgb(255, 255, 251);
-    --sangoshu: rgb(241, 124, 103);
-    --kurotobi: rgb(85, 66, 54);
-}
-
 .modal{
     /* display:none */
     display: none;
@@ -17,11 +8,11 @@
     height: 100%;
     width: 100%;
     overflow: auto;
-    background: var(--benitobi);
+    background: $benitobi;
 }
 
 .modal-content{
-    background: var(--haizakura);
+    background: $haizakura;
     position: absolute;
     width: 30rem;
     height: 12rem;
@@ -36,13 +27,13 @@
 }
 
 .text-win{
-    color: var(--sangoshu);
+    color: $sangoshu;
 }
 .text-lose{
-    color: var(--kurotobi);
+    color: $kurotobi;
 }
 .text-draw{
-    color: var(--benitobi);
+    color: $benitobi;
 }
 
 .modal-content h1{
@@ -53,7 +44,7 @@
 
 .modal-content p{
     font-size: 1.2rem;
-    color: var(--shironeri);
+    color: $shironeri;
     margin-top: 1rem;
 }
 
