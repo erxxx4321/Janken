@@ -198,14 +198,6 @@ img {
   animation-name: bounceInLeft;
 }
 
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  line-height: 1.2;
-  background: #994639;
-  color: #1c1c1c;
-}
-
-/* start preloader */
 .loader {
   position: fixed;
   z-index: 999;
@@ -243,7 +235,13 @@ body {
   }
 }
 
-/* end preloader */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.2;
+  background: #994639;
+  color: #1c1c1c;
+}
+
 .container {
   max-width: 1000px;
   position: absolute;
@@ -284,7 +282,7 @@ body {
 
 @media (max-width: 700px) {
   .loader h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .choices {
     grid-template-columns: 1fr;

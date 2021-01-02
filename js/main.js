@@ -1,18 +1,17 @@
 // preloader start
 window.addEventListener("load", function() {
   const loader = document.querySelector(".loader");
-  //console.log(loader);
+
   loader.className += " hidden"; 
 })
 // preloader end
 
 // game start
-// set dom element
 const choices = document.querySelectorAll('.choice');
 const result = document.getElementById('result');
 const modal = document.querySelector('.modal');
 
-// receive computer choice
+// get computer choice
 function getComputerChoice() {
   const rand = Math.random();
   if(rand < 0.34) {
