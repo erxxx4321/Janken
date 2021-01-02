@@ -1,4 +1,4 @@
-// // preloader start
+// preloader start
 window.addEventListener("load", function() {
   const loader = document.querySelector(".loader");
   //console.log(loader);
@@ -90,7 +90,7 @@ function showWinner(winner, computerChoice){
   }  
 }
 
-// click and play again
+
 function clearModal(e) { 
   if(e.target == modal) {
     modal.style.display = 'none';
