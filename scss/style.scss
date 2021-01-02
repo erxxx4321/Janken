@@ -58,14 +58,14 @@ img{
 
 @import "animation";
 
-:root {
-    $kurotobi: rgb(85, 66, 54);
-    $benitobi: rgb(153, 70, 57);
-    $haizakura: rgb(215, 196, 187);
-    $shironeri: rgb(255, 255, 251);
-    $sumi: rgb(28, 28, 28);
-    $sangoshu: rgb(241, 124, 103);
-}
+
+$kurotobi: rgb(85, 66, 54);
+$benitobi: rgb(153, 70, 57);
+$haizakura: rgb(215, 196, 187);
+$shironeri: rgb(255, 255, 251);
+$sumi: rgb(28, 28, 28);
+$sangoshu: rgb(241, 124, 103);
+
 
 body{
     font-family: 'Noto Sans JP', sans-serif;
@@ -91,7 +91,7 @@ body{
 
 .loader h2{
     font-size: 3.5rem;
-    color: var $shironeri;
+    color: $shironeri;
     line-height: 1.2;
     margin: 1rem;
 }
@@ -147,7 +147,7 @@ body{
 }
 
 .text-lose{
-    color: var($lose-color)
+    color: $sumi;
 }
 
 @media(max-width: 700px){
