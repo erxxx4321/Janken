@@ -62,3 +62,9 @@
         width: 80%;
     }
 }
+
+@media(max-width: 500px){
+    .modal-content{
+        padding: 2.5rem;
+    }
+}
