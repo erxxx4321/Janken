@@ -1,12 +1,14 @@
-// preloader start
+/* preloader start */
+
 window.addEventListener("load", function() {
   const loader = document.querySelector(".loader");
 
   loader.className += " hidden"; 
 })
-// preloader end
 
-// game start
+
+/* game start */
+
 const choices = document.querySelectorAll('.choice');
 const result = document.getElementById('result');
 const modal = document.querySelector('.modal');
@@ -56,12 +58,14 @@ function play(e){
   console.log(winner,playerChoice, computerChoice);
   showWinner(winner, computerChoice);
   modal.style.display = 'block';
-  // console.log(showWinner(winner, computerChoice));
 }
 
-// show final result in Japanese
+choices.forEach(choice => choice.addEventListener('click', play));
+
+// show final result
 function showWinner(winner, computerChoice){
   let jpComChoice;
+  //  show computer choice in Japanese
   if (computerChoice === 'rock') {
     jpComChoice = 'グー';
   }　else if (computerChoice === 'paper') {
@@ -83,19 +87,17 @@ function showWinner(winner, computerChoice){
     `;
   } else {
     result.innerHTML = `
-    <h1 class="text-draw">あいこ! 😆</h1>
+    <h1 class="text-draw">あいこ! 😌</h1>
     <p>コンピューターは ${jpComChoice}</p>
     `;
   }  
 }
 
 
-function clearModal(e) { 
-  if(e.target == modal) {
+/* game end, clear modal */
+
+function clearModal() { 
     modal.style.display = 'none';
-  }
 }
 
-
-choices.forEach(choice => choice.addEventListener('click', play));
-window.addEventListener('click', clearModal);
+modal.addEventListener('click', clearModal);
