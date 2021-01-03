@@ -1,7 +1,7 @@
 # じゃんけん Janken | rock paper scissors game - Japanese version
 
 ### The Odin Project JavaScript 任務實作，參考Traversy Media的教學，再進行排版設計、加入動態效果，製作成日語極簡版。遊戲切分成三階段：Opening、Play、Result，以下依照階段順序，介紹使用到的技術及細節。 
-\
+
 ```
 --Opening--
 * 進行遊戲前的開頭喊聲，運用css animation產生左右彈進效果。
@@ -23,5 +23,5 @@
 * modal彈出視窗設計，加入fadeIn效果
 * 點擊畫面清除modal
 ```
-\
+
 ### See [live demo](https://yvonnechin.github.io/Janken/.)
