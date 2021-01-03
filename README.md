@@ -24,4 +24,4 @@
 
 
 
-See [live demo](https://yvonnechin.github.io/Janken/.)
+### See [live demo](https://yvonnechin.github.io/Janken/.)
