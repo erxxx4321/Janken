@@ -21,3 +21,7 @@
 * 輸出結果程序中，建立輸出語系及勝、敗、平手三種不同的呈現方式。
 * modal彈出視窗設計，加入fadeIn效果
 * 點擊畫面清除modal
+
+
+
+See [live demo](https://yvonnechin.github.io/Janken/.)
