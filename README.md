@@ -5,7 +5,8 @@
 
 ### Description
 ---
-Janken (じゃん拳) is the Japanese version of Rock Paper Scissors. Players say the phrase (“saisho wa gu, jan-ken-pon!“) to start a game. If result is a draw, players say ("aiko desho!"), and on the "sho!" play again.
+Janken (じゃん拳) is the Japanese version of Rock Paper Scissors. Players say the phrase (“saisho wa gu, jan-ken-pon!“) to start a game. If result is a draw, players say ("aiko desho!"), and on ("sho!") play again.
+<br>
 
 ### Main Features
 ---
@@ -13,8 +14,7 @@ Janken (じゃん拳) is the Japanese version of Rock Paper Scissors. Players sa
 - Cross Browser Support
 - Mobile friendly
 - Clean Code
-- Documentation included
-- Code easy to customize
+- Interactive design
 - Includes CSS animation
 <br>
 
